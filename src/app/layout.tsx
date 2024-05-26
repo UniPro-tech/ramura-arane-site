@@ -18,21 +18,30 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={inter.className}>
-        <header className="flex items-center justify-between p-4 bg-gray-800 text-white">
+        <header className="bg-gray-800 text-white">
           <nav className="flex items-center justify-between p-4">
             <a href="/">
               <h1 className="text-2xl font-bold">{siteTitle}</h1>
             </a>
-            <ul className="flex space-x-4">
+            <ul className="flex right-4 text-right space-x-5">
               <li>
                 <a href="/about">About</a>
+              </li>
+              <li>
+                <a href="/download">Download</a>
+              </li>
+              <li>
+                <a href="/license">License</a>
+              </li>
+              <li>
+                <a href="/contact">Contact</a>
               </li>
             </ul>
           </nav>
         </header>
         {children}
         <footer className="p-4 bg-gray-800 text-white text-center">
-          <p>&copy; Yuito Akatsuki 2024, ramura 2024</p>
+          <p>&copy; Yuito Akatsuki 2024, ramura 2024. Designed by Mitsuru Akatsuki</p>
         </footer>
       </body>
     </html>
