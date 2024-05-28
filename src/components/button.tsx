@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ComponentPropsWithoutRef, Ref, forwardRef } from 'react';
 const styles = {
-  commonDesign: "bg-blue-500 text-white px-4 py-2 rounded-md leading-none m-2",
+  commonDesign: "border-b text-white px-4 py-2 leading-none m-2",
   linkDisabled: "opacity-50 cursor-not-allowed leading-none",
 };
 
