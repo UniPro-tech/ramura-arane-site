@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: "https://www.example.com",
+  siteUrl: "http://arane.uniproject-tech.net",
   siteTitle: "現音令彼 - あらねしむか",
 };
