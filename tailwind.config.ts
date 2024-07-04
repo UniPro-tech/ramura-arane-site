@@ -15,8 +15,8 @@ const config: Config = {
       },
     },
     fontFamily: {
-      BIZMincho: ["BIZ UDPMincho", "serif"]
-    }
+      BIZMincho: ["BIZ UDPMincho", "serif"],
+    },
   },
   plugins: [],
 };

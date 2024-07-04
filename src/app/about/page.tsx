@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#1f1f1f] text-white">
-      <div id="about-desc" className="m-0 p-0">
+    <main className="flex min-h-screen items-center justify-center bg-[#1f1f1f] text-white bg-[url('../images/wipe.png')]">
+      <div id="about-desc" className="m-9 p-9">
         <h1 className="text-6xl font-bold">About</h1>
         <ul className="text-1xl leading-6 p-4">
           <li>
@@ -34,10 +34,11 @@ export default function Home() {
         </ul>
       </div>
       <Image
+        className="leading-none m-0 p-0"
         src="/images/fullbody.png"
-        alt="AraneShimuka"
-        width={350}
-        height={350}
+        alt="logo"
+        width={500}
+        height={0}
       />
     </main>
   );

@@ -1,11 +1,12 @@
-FROM node:latest
+FROM node:20-alpine
 
-RUN apt-get update && apt-get install -y \
-    git \
-    && rm -rf /var/lib/apt/lists/*
+WORKDIR /nextjs
 
-COPY ./ /home/node/app
-WORKDIR /home/node/app
+COPY . .
 
+RUN rm -rf node_modules
+RUN rm -rf .next
 RUN npm install
-CMD [ "npm run start -p 3000" ]
+RUN npm run build
+
+CMD ["npm", "start"]
