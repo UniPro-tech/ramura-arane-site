@@ -1,4 +1,11 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contacts - 現音令彼(あらねしむか)",
+  description:
+    "音源、サイトに関するお問い合わせ先です。",
+};
 
 export default function Home() {
   return (

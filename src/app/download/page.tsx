@@ -1,7 +1,13 @@
 //<a href="download?file=foo.png">Download</a>
 import Image from "next/image";
 import { Button } from "@/components/button-legacy";
-import { Button as ButtonNeo } from "@/components/button";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Download - 現音令彼(あらねしむか)",
+  description:
+    "UTAU音源のダウンロードはこちらから。ダウンロード前に、利用規約をご一読ください。",
+};
 
 export default function Home() {
   return (

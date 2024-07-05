@@ -1,5 +1,12 @@
 import Image from "next/image";
 import { Button } from "@/components/button";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "現音令彼(あらねしむか) - らむらによるUTAU音源公式サイト",
+  description:
+    "『現音令彼』 - らむらによるUTAU音源の公式情報サイト。公式設定、ダウンロードの方法などをお届けします！！",
+};
 
 export default function Home() {
   return (
