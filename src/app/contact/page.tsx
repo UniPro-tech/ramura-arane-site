@@ -15,7 +15,7 @@ export default function Home() {
       <p className="py-3">
         お問い合わせは、TwitterのDMへお願いします。
         <br />
-        Twitter: <a href="https://twitter.com/@ramurainoof">@ramurainoof</a>
+        Twitter: <a href="https://twitter.com/@ramura0708">@ramura0708</a>
       </p>
       <h2 className="text-2xl py-2.5">サイトに関するお問い合わせ</h2>
       <p className="py-3">
