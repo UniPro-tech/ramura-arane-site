@@ -18,7 +18,7 @@ jobs:
         uses: docker/setup-buildx-action@v1
 
       - name: Build Docker image
-        run: docker build -t ${{ env.K8S_DOCKER_REGISTHOST }}/arane-site:${{ env.TAG_NAME }} .
+        run: docker build -t ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:${{ env.TAG_NAME }} .
       - name: Push Docker image
-        run: docker push ${{ env.K8S_DOCKER_REGISTHOST }}/arane-site:${{ env.TAG_NAME }}
+        run: docker push ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:${{ env.TAG_NAME }}
 
