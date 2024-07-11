@@ -17,8 +17,18 @@ jobs:
       - name: Insecure Setting
         run: |
           echo '{ "insecure-registries": ["${{ secrets.K8S_DOCKER_REGISTRY }}"] }' | sudo tee /etc/docker/daemon.json
+          cat /etc/docker/daemon.json # 設定ファイルの内容を確認するために追加
+
+      - name: Restart Docker
+        run: |
           sudo systemctl daemon-reload
           sudo systemctl restart docker
+        continue-on-error: true # エラーが発生してもジョブを継続
+
+      - name: Check Docker status
+        run: |
+          sudo systemctl status docker.service
+          sudo journalctl -xeu docker.service
 
       - name: Build Docker image
         run: docker build -t ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:latest .
