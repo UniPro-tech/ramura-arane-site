@@ -20,7 +20,7 @@ jobs:
 
       - name: Insecure Setting
         run: |
-          echo '{ "insecure-registries": ["${{ secrets.K8S_DOCKER_REGISTRY }}"] }' | sudo tee /etc/docker/daemon.json
+          echo '{ "insecure-registries": ["${{ secrets.K8S_DOCKER_REGISTHOST }}"] }' | sudo tee /etc/docker/daemon.json
           sudo systemctl daemon-reload
           sudo systemctl restart docker
 
