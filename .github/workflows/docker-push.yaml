@@ -16,7 +16,9 @@ jobs:
       
       - name: Insecure Setting
         run: |
-          echo '{ "insecure-registries": ["${{ secrets.K8S_DOCKER_REGISTRY }}"] }' > ~/.docker/config.json
+          echo '{ "insecure-registries": ["${{ secrets.K8S_DOCKER_REGISTRY }}"] }' > ~/.docker/config.json;
+          systemctl daemon-reload;
+          systemctl restart docker;
 
       - name: Build and push Docker image
         run: docker build -t ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:latest .
