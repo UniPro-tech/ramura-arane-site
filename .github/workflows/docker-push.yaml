@@ -14,17 +14,6 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      - name: Insecure Setting
-        run: |
-          echo '{ "insecure-registries": ["${{ secrets.K8S_DOCKER_REGISTHOST }}"] }' | sudo tee /etc/docker/daemon.json
-          cat /etc/docker/daemon.json # 設定ファイルの内容を確認するために追加
-
-      - name: Restart Docker
-        run: |
-          sudo systemctl daemon-reload
-          sudo systemctl restart docker
-        continue-on-error: true # エラーが発生してもジョブを継続
-
       - name: Check Docker status
         run: |
           sudo systemctl status docker.service
