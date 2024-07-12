@@ -16,6 +16,8 @@ jobs:
 
       - name: Check Docker status
         run: |
+          export DOCKER_CLIENT_TIMEOUT=120
+          export COMPOSE_HTTP_TIMEOUT=120
           sudo systemctl status docker.service
           sudo journalctl -xeu docker.service
 
@@ -23,4 +25,4 @@ jobs:
         run: docker build -t ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:latest .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:latest --dns 8.8.8.8
+        run: docker push ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:latest
