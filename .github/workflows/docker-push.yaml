@@ -22,7 +22,7 @@ jobs:
           sudo journalctl -xeu docker.service
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:latest .
+        run: docker build -t [${{ secrets.K8S_DOCKER_REGISTHOST }}]/arane-site:latest .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:latest
+        run: docker push [${{ secrets.K8S_DOCKER_REGISTHOST }}]/arane-site:latest
