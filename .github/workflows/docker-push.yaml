@@ -23,4 +23,4 @@ jobs:
         run: docker build -t ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:latest .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:latest
+        run: docker push ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:latest --dns 8.8.8.8
