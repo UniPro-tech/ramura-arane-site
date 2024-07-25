@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: registry.container-registry:32000/ramura-site:1.2.4
+        image: 10.152.183.215:32000/ramura-site:1.2.4
         ports:
         - containerPort: 3000
 
