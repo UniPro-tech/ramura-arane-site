@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: localhost:32000/ramura-site:1.2.5
+        image: 172.16.150.100:5000/ramura-site:1.2.5
         ports:
         - containerPort: 3000
 
