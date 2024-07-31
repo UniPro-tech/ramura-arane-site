@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: 172.16.150.100:5000/ramura-site:1.2.7
+        image: localhost:32000/ramura-site:1.2.7
         ports:
         - containerPort: 3000
 
@@ -29,3 +29,5 @@ spec:
   - port: 80
     targetPort: 3000
   type: LoadBalancer
+
+  
