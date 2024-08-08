@@ -1,5 +1,35 @@
 import Image from "next/image";
 import { Metadata } from "next";
+import {
+  Article as JsonLDArticle,
+  WebPage as JsonLDWebPage,
+  WithContext,
+} from 'schema-dts';
+
+const jsonLd: WithContext<JsonLDArticle | JsonLDWebPage> = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'About - 荒音の夜 - UTAU配布サイト',
+  description: '現音令彼(あらねしむか)の公式設定についての情報です。使用する前にご一読ください。',
+  url: 'https://arane.uniproject-tech.net/about',
+  inLanguage: 'ja',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: '荒音の夜 - 現音令彼(あらねしむか)公式サイト',
+    url: 'https://arane.uniproject-tech.net',
+  },
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://arane.uniproject-tech.net/images/title.png',
+    license: "https://arane.uniproject-tech.net/license",
+    creditText: "ramura 2024",
+    creator: {
+      '@type': "Person",
+      name: "ramura",
+    },
+    copyrightNotice: "ramura"
+  },
+};
 
 export const metadata: Metadata = {
   title: "About - 荒音の夜 - UTAU配布サイト",
