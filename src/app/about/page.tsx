@@ -2,8 +2,23 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About - 現音令彼(あらねしむか)",
+  title: "About - 荒音の夜 - UTAU配布サイト",
   description: "現音令彼(あらねしむか)の公式設定についての情報です。使用する前にご一読ください。",
+  openGraph: {
+    title: 'About - 荒音の夜 - UTAU配布サイト',
+    description: '現音令彼(あらねしむか)の公式設定についての情報です。使用する前にご一読ください。',
+    url: 'https://arane.uniproject-tech.net/about',
+    siteName: '荒音の夜 - 現音令彼(あらねしむか)公式サイト',
+    images: [
+      {
+        url: 'https://arane.uniproject-tech.net/images/title.png',
+        width: 800,
+        height: 600,
+      }
+    ],
+    locale: 'ja_JP',
+    type: 'website',
+  },
 };
 
 export default function Home() {

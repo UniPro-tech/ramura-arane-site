@@ -4,9 +4,24 @@ import { Button } from "@/components/button-legacy";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Download - 現音令彼(あらねしむか)",
+  title: "Download - 荒音の夜 - UTAU配布サイト",
   description:
-    "UTAU音源のダウンロードはこちらから。ダウンロード前に、利用規約をご一読ください。",
+    "UTAU音源「現音令彼(あらねしむか)」のダウンロードはこちらから。ダウンロード前に、利用規約をご一読ください。",
+  openGraph: {
+    title: 'Download - 荒音の夜 - UTAU配布サイト',
+    description: 'UTAU音源「現音令彼(あらねしむか)」のダウンロードはこちらから。ダウンロード前に、利用規約をご一読ください。',
+    url: 'https://arane.uniproject-tech.net/download',
+    siteName: '荒音の夜 - 現音令彼(あらねしむか)公式サイト',
+    images: [
+      {
+        url: 'https://arane.uniproject-tech.net/images/title.png',
+        width: 800,
+        height: 600,
+      }
+    ],
+    locale: 'ja_JP',
+    type: 'website',
+  },
 };
 
 export default function Home() {

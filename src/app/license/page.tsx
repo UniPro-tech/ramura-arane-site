@@ -2,9 +2,24 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "License - 現音令彼(あらねしむか)",
+  title: "License - 荒音の夜 - UTAU配布サイト",
   description:
     "現音令彼(あらねしむか)の利用規約です。使用する際はご一読ください。",
+  openGraph: {
+    title: 'License - 荒音の夜 - UTAU配布サイト',
+    description: '現音令彼(あらねしむか)の利用規約です。使用する際はご一読ください。',
+    url: 'https://arane.uniproject-tech.net/license',
+    siteName: '荒音の夜 - 現音令彼(あらねしむか)公式サイト',
+    images: [
+      {
+        url: 'https://arane.uniproject-tech.net/images/title.png',
+        width: 800,
+        height: 600,
+      }
+    ],
+    locale: 'ja_JP',
+    type: 'website',
+  },
 };
 
 export default function Home() {
