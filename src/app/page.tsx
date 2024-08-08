@@ -20,6 +20,7 @@ const jsonLd: WithContext<JsonLDArticle | JsonLDWebPage> = {
     url: 'https://arane.uniproject-tech.net/images/title.png',
     license: "https://arane.uniproject-tech.net/license",
     creditText: "ramura 2024",
+    acquireLicensePage: "https://arane.uniproject-tech.net/license",
     creator: {
       '@type': "Person",
       name: "ramura",
