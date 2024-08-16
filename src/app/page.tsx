@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/button";
 import type { Metadata } from "next";
+import Niconico from "@/components/nicoVideoPlayer";
 
 import {
   Article as JsonLDArticle,
@@ -58,25 +59,35 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <main className="flex min-h-screen p-0 m-0 justify-center items-center bg-[#1f1f1f] bg-[url('../images/wipe.png')]">
-        <div id="description" className="flex flex-col m-9 p-9 leading-none">
-          <h1 className="text-7xl font-bold text-white m-0 font-BIZMincho leading-none">
+      <main className="flex flex-col min-h-screen p-0 m-0 space-y-4 justify-center items-center w-full bg-[#1f1f1f]">
+        <section className="m-0 p-0 flex justify-center items-center bg-[#1f1f1f] bg-[url('../images/wipe.png')] w-full flex-grow">
+          <div id="description" className="flex flex-col m-0 p-9 leading-none">
+            <h1 className="text-7xl font-bold text-white m-0 font-BIZMincho leading-none">
+              <ruby>
+                現音令彼<rt>あらねしむか</rt>
+              </ruby>
+            </h1>
+            <Button<"Link"> href="/about">About</Button>
+            <Button<"Link"> href="/download">Download</Button>
+            <Button<"Link"> href="/license">License</Button>
+            <Button<"Link"> href="/contact">Contacts</Button>
+          </div>
+          <Image
+            className="leading-none m-0 p-0"
+            src="/images/fullbody.png"
+            alt="logo"
+            width={500}
+            height={0}
+          />
+        </section>
+        <section className="flex-grow flex flex-col space-y-3 m-2">
+          <h2 className="text-4xl font-bold text-white m-0 leading-none">
             <ruby>
-              現音令彼<rt>あらねしむか</rt>
+              配布動画
             </ruby>
-          </h1>
-          <Button<"Link"> href="/about">About</Button>
-          <Button<"Link"> href="/download">Download</Button>
-          <Button<"Link"> href="/license">License</Button>
-          <Button<"Link"> href="/contact">Contacts</Button>
-        </div>
-        <Image
-          className="leading-none m-0 p-0"
-          src="/images/fullbody.png"
-          alt="logo"
-          width={500}
-          height={0}
-        />
+          </h2>
+          <Niconico id="sm43893594" width={640} height={360}></Niconico>
+        </section>
       </main>
     </>
   );
