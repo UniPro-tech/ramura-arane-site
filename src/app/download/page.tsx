@@ -29,7 +29,7 @@ export default function Home() {
     <main className="flex min-h-screen p-0 m-0 justify-center items-center bg-[#1f1f1f] bg-[url('../images/wipe.png')]">
       <div>
         <h1 className="text-4xl text-white font-bold">Download</h1>
-        <p>ダウンロードする前に、一度、利用規約をお読みください。</p>
+        <p className="text-white">ダウンロードする前に、一度、利用規約をお読みください。</p>
         <br />
         <Button<"Link">
           href="/download/dl-endpoint?file=AraneShimuka-UTAU.zip"
