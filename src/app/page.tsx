@@ -86,7 +86,10 @@ export default function Home() {
               配布動画
             </ruby>
           </h2>
-          <Niconico id="sm43893594" width={640} height={360}></Niconico>
+          <div className="flex flex-row space-x-2">
+            <Niconico id="sm43893594" width={640} height={360}></Niconico>
+            <Niconico id="sm44014847" width={640} height={360}></Niconico>
+          </div>
         </section>
       </main>
     </>
