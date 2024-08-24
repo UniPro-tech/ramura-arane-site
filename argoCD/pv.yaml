@@ -11,6 +11,9 @@ spec:
     server: 172.16.110.199
     path: /nfs/users/ramura/arane-site/zips
   persistentVolumeReclaimPolicy: Retain
+  claimRef:
+    namespace: arane
+    name: zip-pvc
 
 ---
 
@@ -24,6 +27,7 @@ spec:
   resources:
     requests:
       storage: 3Gi
+  volumeName: arane-zip-pv
   selector:
     matchLabels:
       app: arane
