@@ -9,7 +9,7 @@ spec:
   template:
     metadata:
       labels:
-        app: ramura-site
+        app: arane
     spec:
       containers:
       - name: app
