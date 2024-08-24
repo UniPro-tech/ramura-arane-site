@@ -12,24 +12,24 @@ spec:
         app: arane
     spec:
       containers:
-      - name: app
-        image: localhost:32000/arane-site:2.0.0
-        ports:
-        - containerPort: 3000
-        resources:
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
-          requests:
-            memory: "128Mi"
-            cpu: "250m"
-        volumeMounts:
-        - name: zip-pvc
-          mountPath: /usr/src/app/public/assets
-        volumes:
-        - name: zip-pvc
-          persistentVolumeClaim:
-            claimName: arane-zip-pv
+        - name: app
+          image: localhost:32000/arane-site:2.0.0
+          ports:
+            - containerPort: 3000
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+            requests:
+              memory: "128Mi"
+              cpu: "250m"
+          volumeMounts:
+            - name: zip-pvc
+              mountPath: /usr/src/app/public/assets
+    volumes:
+      - name: zip-pvc
+        persistentVolumeClaim:
+          claimName: arane-zip-pv
 ---
 apiVersion: v1
 kind: Service
