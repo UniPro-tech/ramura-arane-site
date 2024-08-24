@@ -23,6 +23,13 @@ spec:
           requests:
             memory: "128Mi"
             cpu: "250m"
+        volumeMounts:
+        - name: zip-volume
+          mountPath: /usr/src/app/public/assets
+        volumes:
+        - name: zip-volume
+          persistentVolumeClaim:
+            claimName: zip-pvc
 ---
 apiVersion: v1
 kind: Service
