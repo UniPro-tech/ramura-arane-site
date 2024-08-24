@@ -26,10 +26,10 @@ spec:
           volumeMounts:
             - name: zip-pvc
               mountPath: /usr/src/app/public/assets
-    volumes:
-      - name: zip-pvc
-        persistentVolumeClaim:
-          claimName: arane-zip-pv
+      volumes:
+        - name: zip-pvc
+          persistentVolumeClaim:
+            claimName: arane-zip-pv
 ---
 apiVersion: v1
 kind: Service
