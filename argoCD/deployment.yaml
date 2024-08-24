@@ -29,7 +29,7 @@ spec:
       volumes:
         - name: zip-pvc
           persistentVolumeClaim:
-            claimName: arane-zip-pv
+            claimName: zip-pvc
 ---
 apiVersion: v1
 kind: Service
