@@ -25,7 +25,7 @@ spec:
               cpu: "250m"
           volumeMounts:
             - name: zip-pvc
-              mountPath: /usr/src/app/public/assets
+              mountPath: /nextjs/public/assets
       volumes:
         - name: zip-pvc
           persistentVolumeClaim:
