@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: ramura-site
+      app: arane
   template:
     metadata:
       labels:
@@ -29,7 +29,7 @@ spec:
         volumes:
         - name: zip-pvc
           persistentVolumeClaim:
-            claimName: zip-pvc
+            claimName: arane-zip-pv
 ---
 apiVersion: v1
 kind: Service
@@ -37,7 +37,7 @@ metadata:
   name: ramura-site
 spec:
   selector:
-    app: ramura-site
+    app: arane
   ports:
   - port: 80
     targetPort: 3000
