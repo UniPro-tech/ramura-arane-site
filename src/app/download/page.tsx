@@ -32,10 +32,22 @@ export default function Home() {
         <p className="text-white">ダウンロードする前に、一度、利用規約をお読みください。</p>
         <br />
         <Button<"Link">
-          href="/download/dl-endpoint?file=AraneShimuka-UTAU.zip"
+          href="/download/dl-endpoint?file=tandokuon.zip"
           className="mt-4"
         >
-          UTAU音源
+          単独音(4音階)
+        </Button>
+        <Button<"Link">
+          href="/download/dl-endpoint?file=renzokuon.zip"
+          className="mt-4"
+        >
+          連続音(1音階)
+        </Button>
+        <Button<"Link">
+          href="/download/dl-endpoint?file=tougou.zip"
+          className="mt-4"
+        >
+          統合音源(連続1音階/単独音4音階)
         </Button>
       </div>
       <Image
