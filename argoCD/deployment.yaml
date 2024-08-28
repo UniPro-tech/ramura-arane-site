@@ -29,7 +29,7 @@ spec:
       volumes:
         - name: zip-pvc
           persistentVolumeClaim:
-            claimName: zip-pvc
+            claimName: zips
 ---
 apiVersion: v1
 kind: Service
