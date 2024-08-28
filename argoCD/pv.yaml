@@ -11,7 +11,7 @@ spec:
     - ReadWriteMany
   nfs:
     server: 172.16.110.199
-    path: /nfs/users/ramura/arane-site/zips
+    path: /nfs/users/yuito-it/arane/zips
   persistentVolumeReclaimPolicy: Retain
   claimRef:
     namespace: arane
