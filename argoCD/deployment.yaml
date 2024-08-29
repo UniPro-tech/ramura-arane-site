@@ -26,6 +26,9 @@ spec:
           volumeMounts:
             - name: zip-pvc
               mountPath: /nextjs/public/assets
+          env:
+          - name: TZ
+            value: Asia/Tokyo
       volumes:
         - name: zip-pvc
           persistentVolumeClaim:
