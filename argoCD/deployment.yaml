@@ -26,10 +26,13 @@ spec:
           volumeMounts:
             - name: zip-pvc
               mountPath: /nextjs/public/assets
+          env:
+          - name: TZ
+            value: Asia/Tokyo
       volumes:
         - name: zip-pvc
           persistentVolumeClaim:
-            claimName: zip-pvc
+            claimName: zips
 ---
 apiVersion: v1
 kind: Service
