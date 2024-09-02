@@ -15,7 +15,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   claimRef:
     namespace: arane
-    name: zips
+    name: zip
 
 ---
 
