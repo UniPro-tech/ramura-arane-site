@@ -10,7 +10,7 @@ spec:
   accessModes:
     - ReadWriteMany
   nfs:
-    server: 172.16.110.199
+    server: nfs.unipro.infra
     path: /nfs/users/yuito-it/arane/zips
   persistentVolumeReclaimPolicy: Retain
   claimRef:
