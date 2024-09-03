@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: localhost:32000/arane-site:2.1.1
+          image: localhost:32000/arane-site:2.2.0
           ports:
             - containerPort: 3000
           resources:
@@ -32,7 +32,7 @@ spec:
       volumes:
         - name: zip-pvc
           persistentVolumeClaim:
-            claimName: zips
+            claimName: zip
 ---
 apiVersion: v1
 kind: Service
