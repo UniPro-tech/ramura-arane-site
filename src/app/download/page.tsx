@@ -29,7 +29,9 @@ export default function Home() {
     <main className="flex min-h-screen p-0 m-0 justify-center items-center bg-[#1f1f1f] bg-[url('../images/wipe.png')]">
       <div>
         <h1 className="text-4xl text-white font-bold">Download</h1>
-        <p className="text-white">ダウンロードする前に、一度、利用規約をお読みください。
+        <p className="text-white">
+          ダウンロードする前に、一度、利用規約をお読みください。<br />
+          なお、特殊音源に関しては、単体では使用できません。特殊音素のエイリアスはEです。
         </p>
         <br />
         <div className="flex">
