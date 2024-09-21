@@ -33,4 +33,15 @@ spec:
         - name: zip-pvc
           persistentVolumeClaim:
             claimName: zip
-
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ramura-site
+spec:
+  selector:
+    app: arane
+  ports:
+  - port: 80
+    targetPort: 3000
+  type: LoadBalancer
