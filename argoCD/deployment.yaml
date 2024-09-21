@@ -39,6 +39,7 @@ kind: Service
 metadata:
   name: ramura-site
 spec:
+  ipFamilyPolicy: PreferDualStack
   selector:
     app: arane
   ports:
