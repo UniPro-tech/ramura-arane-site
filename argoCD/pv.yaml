@@ -14,7 +14,7 @@ spec:
     path: /nfs/users/yuito-it/arane/zips
   persistentVolumeReclaimPolicy: Retain
   claimRef:
-    namespace: arane
+    namespace: arane-site
     name: zip
 
 ---
