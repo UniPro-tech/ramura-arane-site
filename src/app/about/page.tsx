@@ -60,7 +60,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <main className="flex min-h-screen items-center justify-center bg-[#1f1f1f] text-white bg-[url('../images/wipe.png')]">
+      <main className="flex min-h-screen items-center justify-center text-white bg-custom-gradient">
         <div id="about-desc" className="m-9 p-9">
           <h1 className="text-6xl font-bold">About</h1>
           <ul className="text-1xl leading-6 p-4">

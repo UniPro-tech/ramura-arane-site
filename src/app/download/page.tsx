@@ -26,15 +26,16 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen p-0 m-0 justify-center items-center bg-[#1f1f1f] bg-[url('../images/wipe.png')]">
+    <main className="flex min-h-screen p-0 m-0 justify-center items-center bg-custom-gradient">
       <div>
         <h1 className="text-4xl text-white font-bold">Download</h1>
         <p className="text-white">
           ダウンロードする前に、一度、利用規約をお読みください。<br />
-          なお、特殊音源に関しては、単体では使用できません。特殊音素のエイリアスはEです。
+          なお、特殊音源に関しては、単体では使用できません。<br />
+          特殊音素のエイリアスはEです。
         </p>
         <br />
-        <div className="flex">
+        <div className="flex flex-wrap">
           <Button<"Link">
             href="/download/dl-endpoint?file=tandokuon.zip"
             className="mt-4"
@@ -62,7 +63,6 @@ export default function Home() {
             特殊音源
           </Button>
         </div>
-
       </div>
       <Image
         className="leading-none m-0 p-0"
