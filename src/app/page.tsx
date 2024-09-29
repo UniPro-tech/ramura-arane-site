@@ -18,7 +18,7 @@ const jsonLd: WithContext<JsonLDArticle | JsonLDWebPage> = {
   inLanguage: 'ja',
   image: {
     '@type': 'ImageObject',
-    url: 'https://arane.uniproject-tech.net/images/title.png',
+    url: 'https://arane.uniproject-tech.net/images/title.webp',
     license: "https://arane.uniproject-tech.net/license",
     creditText: "ramura 2024",
     acquireLicensePage: "https://arane.uniproject-tech.net/license",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: '荒音の夜 - 現音令彼(あらねしむか)公式サイト',
     images: [
       {
-        url: 'https://arane.uniproject-tech.net/images/title.png',
+        url: 'https://arane.uniproject-tech.net/images/title.webp',
         width: 800,
         height: 600,
       }
@@ -74,7 +74,7 @@ export default function Home() {
           </div>
           <Image
             className="leading-none m-0 p-0"
-            src="/images/fullbody.png"
+            src="/images/fullbody.webp"
             alt="logo"
             width={500}
             height={0}

@@ -1,4 +1,4 @@
-//<a href="download?file=foo.png">Download</a>
+//<a href="download?file=foo.webp">Download</a>
 import Image from "next/image";
 import { Button } from "@/components/button-legacy";
 import { Metadata } from "next";
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: '荒音の夜 - 現音令彼(あらねしむか)公式サイト',
     images: [
       {
-        url: 'https://arane.uniproject-tech.net/images/title.png',
+        url: 'https://arane.uniproject-tech.net/images/title.webp',
         width: 800,
         height: 600,
       }
@@ -66,7 +66,7 @@ export default function Home() {
       </div>
       <Image
         className="leading-none m-0 p-0"
-        src="/images/fullbody.png"
+        src="/images/fullbody.webp"
         alt="logo"
         width={500}
         height={0}

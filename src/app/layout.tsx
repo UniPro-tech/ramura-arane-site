@@ -26,7 +26,7 @@ export default function RootLayout({
             <a href="/">
               <h1 className="text-2xl font-bold">
                 <Image
-                  src="/images/title.png"
+                  src="/images/title.webp"
                   alt="荒音の夜(サイトロゴ)"
                   width={100}
                   height={100}
