@@ -20,7 +20,7 @@ const jsonLd: WithContext<JsonLDArticle | JsonLDWebPage> = {
   },
   image: {
     '@type': 'ImageObject',
-    url: 'https://arane.uniproject-tech.net/images/title.png',
+    url: 'https://arane.uniproject-tech.net/images/title.webp',
     license: "https://arane.uniproject-tech.net/license",
     acquireLicensePage: "https://arane.uniproject-tech.net/license",
     creditText: "ramura 2024",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: '荒音の夜 - 現音令彼(あらねしむか)公式サイト',
     images: [
       {
-        url: 'https://arane.uniproject-tech.net/images/title.png',
+        url: 'https://arane.uniproject-tech.net/images/title.webp',
         width: 800,
         height: 600,
       }
@@ -60,7 +60,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <main className="flex min-h-screen items-center justify-center bg-[#1f1f1f] text-white bg-[url('../images/wipe.png')]">
+      <main className="flex min-h-screen items-center justify-center text-white bg-custom-gradient">
         <div id="about-desc" className="m-9 p-9">
           <h1 className="text-6xl font-bold">About</h1>
           <ul className="text-1xl leading-6 p-4">
@@ -88,7 +88,7 @@ export default function Home() {
         </div>
         <Image
           className="leading-none m-0 p-0"
-          src="/images/fullbody.png"
+          src="/images/fullbody.webp"
           alt="logo"
           width={500}
           height={0}

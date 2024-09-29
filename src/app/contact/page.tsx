@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: '荒音の夜 - 現音令彼(あらねしむか)公式サイト',
     images: [
       {
-        url: 'https://arane.uniproject-tech.net/images/title.png',
+        url: 'https://arane.uniproject-tech.net/images/title.webp',
         width: 800,
         height: 600,
       }
