@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: localhost:32000/arane-site:4.1.1
+          image: localhost:32000/arane-site:4.2.0
           ports:
             - containerPort: 3000
           resources:
