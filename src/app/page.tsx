@@ -77,6 +77,7 @@ export default function Home() {
             className="leading-none m-0 p-0"
             src="/images/fullbody.webp"
             alt="logo"
+            priority={true}
             width={500}
             height={0}
           />
