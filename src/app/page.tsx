@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Button } from "@/components/button";
 import type { Metadata } from "next";
-import Niconico from "@/components/nicoVideoPlayer";
+import dynamic from "next/dynamic";
+const Niconico = dynamic(() => import('@/components/nicoVideoPlayer'));
 
 import {
   Article as JsonLDArticle,
