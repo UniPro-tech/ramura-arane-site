@@ -19,3 +19,7 @@ spec:
             name: ramura-site
             port:
               number: 80
+  tls:
+  - hosts:
+    - arane-dev.uniproject-tech.net
+    secretName: arane-site-tls
