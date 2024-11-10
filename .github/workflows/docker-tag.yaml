@@ -5,8 +5,7 @@ on:
       - "v*"
 
 jobs:
-  # Job 1: Docker setup and build
-  build:
+  BuildAndPush:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -21,44 +20,6 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:${{ env.TAG_NAME }} .
-
-      - name: Save Docker image to file
-        run: docker save ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:${{ env.TAG_NAME }} -o image.tar
-
-      - name: Upload Docker image as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: image
-          path: image.tar
-          retention-days: 1
-
-  # Job 2: Push Docker image
-  push:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Download Docker image artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: image
-          path: .
-
-      - name: Extract tag name
-        run: |
-          tagname=${GITHUB_REF#refs/*/} && echo "TAG_NAME=${tagname#v}" >> $GITHUB_ENV
-
-      - name: Check Docker status
-        run: |
-          export DOCKER_CLIENT_TIMEOUT=18000
-          export COMPOSE_HTTP_TIMEOUT=240
-          sudo systemctl status docker.service
-          sudo journalctl -xeu docker.service
-
-      - name: Load Docker image from file
-        run: docker load -i image.tar
 
       - name: Push Docker image
         run: docker push ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:${{ env.TAG_NAME }}
