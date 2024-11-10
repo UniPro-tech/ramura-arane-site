@@ -1,0 +1,53 @@
+name: Auto Version Tag
+on:
+  pull_request:
+    branches:
+      - dev
+    types:
+      - closed
+
+jobs:
+  TaggingMajor:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'major')
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: npm tag
+        run: |
+          npm version premajor
+          git push --follow-tags
+  TaggingMinor:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'minor')
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: npm tag
+        run: |
+          npm version preminor
+          git push --follow-tags
+  TaggingPatch:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'patch')
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: npm tag
+        run: |
+          npm version prepatch
+          git push --follow-tags
+  TaggingRlease:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'release')
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: npm tag
+        run: |
+          npm version prerelease
+          git push --follow-tags
