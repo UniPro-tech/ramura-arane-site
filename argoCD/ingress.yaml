@@ -9,17 +9,17 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: arane.uniproject-tech.net
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: ramura-site
-            port:
-              number: 80
+    - host: arane.uniproject-tech.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ramura-site
+                port:
+                  number: 80
   tls:
-  - hosts:
-    - arane.uniproject-tech.net
-    secretName: arane-site-tls
+    - hosts:
+        - arane.uniproject-tech.net
+      secretName: arane-site-tls
