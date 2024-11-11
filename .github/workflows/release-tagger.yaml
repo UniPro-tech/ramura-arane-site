@@ -59,7 +59,7 @@ jobs:
         continue-on-error: true
 
       - name: Send Discord Notification
-        if: failure()
+        if: failure()  # Rebaseが失敗した場合のみ実行
         run: |
           curl -H "Content-Type: application/json" \
                -X POST \
