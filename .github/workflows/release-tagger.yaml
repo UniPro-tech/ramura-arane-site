@@ -16,7 +16,6 @@ jobs:
 
       - name: git setting
         run: |
-          echo "${{steps.labels.outputs.json}},${{ matrix.label }}"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "GitHub Actions"
 
@@ -34,9 +33,60 @@ jobs:
         if: contains(github.event.pull_request.labels.*.name, 'PR:patch')
         run: |
           npm version patch
-      
-      - name: rebase
+  rebase-develop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Git
         run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+      - name: Fetch all branches
+        run: git fetch origin
+
+      - name: Checkout develop branch
+        run: git checkout develop
+
+      - name: Rebase onto main
+        run: |
+          git rebase origin/main || echo "::error::Rebase failed. Please resolve conflicts manually."
+        continue-on-error: true
+
+      - name: Send Discord Notification
+        if: failure()
+        run: |
+          curl -H "Content-Type: application/json" \
+               -X POST \
+               -d '{
+                    "embeds": [
+                      {
+                        "title": "🚨 Rebase Conflict Detected!",
+                        "description": "A rebase conflict occurred in the `develop` branch after merging into `main`. Please resolve it manually.",
+                        "url": "https://github.com/UniPro-tech/ramura-utau-site",  # リポジトリのURLを設定
+                        "color": 16711680,
+                        "fields": [
+                          {
+                            "name": "Branch",
+                            "value": "`develop`"
+                          },
+                          {
+                            "name": "Action Required",
+                            "value": "Manual conflict resolution needed."
+                          }
+                        ],
+                        "footer": {
+                          "text": "GitHub Actions Notification"
+                        },
+                        "timestamp": "'$(date --utc +%Y-%m-%dT%H:%M:%SZ)'"
+                      }
+                    ]
+                  }' \
+               ${{ secrets.DISCORD_WEBHOOK_URL }}
           git push --tags
           git checkout main
           git pull
