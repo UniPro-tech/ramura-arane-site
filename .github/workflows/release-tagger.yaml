@@ -10,26 +10,36 @@ jobs:
   Tagging:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
-    strategy:
-      matrix:
-        label: [major, minor, patch, release]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: npm tag
-        if: contains(github.event.pull_request.labels.*.name, 'PR:${{ matrix.label }}')
+      - name: git setting
         run: |
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "GitHub Actions"
-          npm version ${{ matrix.label }}
+
+      - name: npm tag(Major)
+        if: contains(github.event.pull_request.labels.*.name, 'PR:major')
+        run: |
+          npm version major
+      
+      - name: npm tag(Minor)
+        if: contains(github.event.pull_request.labels.*.name, 'PR:minor')
+        run: |
+          npm version minor
+      
+      - name: npm tag(Patch)
+        if: contains(github.event.pull_request.labels.*.name, 'PR:patch')
+        run: |
+          npm version patch
       
       - name: rebase
         run: |
-          git push --follow-tagst
+          git push --tags
           git checkout main
           git pull
           git checkout dev
           git pull
           git rebase main
-          git push
+          git push --all
