@@ -28,7 +28,7 @@ jobs:
           echo "json=$json" >> "$GITHUB_OUTPUT"
 
       - name: npm tag
-        if: contains(fromJSON(steps.labels.outputs.json), 'PR:${{ matrix.label }}')
+        if: contains(fromJSON(steps.labels.outputs.json), '${{ matrix.label }}')
         run: |
           echo "${{steps.labels.outputs.json}},${{ matrix.label }}"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
