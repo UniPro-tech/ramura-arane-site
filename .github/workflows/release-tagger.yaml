@@ -35,6 +35,7 @@ jobs:
           npm version patch
   rebase-develop:
     runs-on: ubuntu-latest
+    needs: Tagging
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -50,7 +51,7 @@ jobs:
         run: git fetch origin
 
       - name: Checkout develop branch
-        run: git checkout develop
+        run: git checkout dev
 
       - name: Rebase onto main
         run: |
@@ -58,7 +59,7 @@ jobs:
         continue-on-error: true
 
       - name: Send Discord Notification
-        if: failure()
+        if: failure()  # Rebaseが失敗した場合のみ実行
         run: |
           curl -H "Content-Type: application/json" \
                -X POST \
@@ -87,10 +88,9 @@ jobs:
                     ]
                   }' \
                ${{ secrets.DISCORD_WEBHOOK_URL }}
+      - name: Push changes
+        run: |
+          git push --all
           git push --tags
-          git checkout main
-          git pull
           git checkout dev
-          git pull
-          git rebase main
           git push --all
