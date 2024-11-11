@@ -30,6 +30,7 @@ jobs:
       - name: npm tag
         if: contains(fromJSON(steps.labels.outputs.json), 'PR:${{ matrix.label }}')
         run: |
+          echo "${{steps.labels.outputs.json}},${{ matrix.label }}"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "GitHub Actions"
           npm version pre${{ matrix.label }}
