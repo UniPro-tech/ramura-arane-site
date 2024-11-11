@@ -48,7 +48,6 @@ jobs:
       - name: Rebase onto main
         run: |
           git rebase origin/main || echo "::error::Rebase failed. Please resolve conflicts manually."
-        continue-on-error: true
 
       - name: Send Discord Notification
         if: failure()
