@@ -10,28 +10,37 @@ jobs:
   Tagging:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
-    strategy:
-      matrix:
-        label: [major, minor, patch, release]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
-      - id: labels
-        shell: bash
-        env:
-          GH_REPO: ${{ github.repository }}
-          GH_TOKEN: ${{ github.token }}
-          PR_NUMBER: ${{ github.event.number }}
-        run: |
-          json=$(gh pr view "$PR_NUMBER" --json labels | jq -c '.labels|map(.name)')
-          echo "json=$json" >> "$GITHUB_OUTPUT"
       
-      - name: npm tag
-        if: contains(fromJSON(steps.labels.outputs.json), '${{ matrix.label }}')
+      - name: git setting
         run: |
           echo "${{steps.labels.outputs.json}},${{ matrix.label }}"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "GitHub Actions"
-          npm version pre${{ matrix.label }}
-          git push --follow-tags
+
+      - name: npm tag(Major)
+        if: contains(github.event.pull_request.labels.*.name, 'PR:major')
+        run: |
+          npm version premajor
+      
+      - name: npm tag(Minor)
+        if: contains(github.event.pull_request.labels.*.name, 'PR:minor')
+        run: |
+          npm version preminor
+      
+      - name: npm tag(Patch)
+        if: contains(github.event.pull_request.labels.*.name, 'PR:patch')
+        run: |
+          npm version prepatch
+      
+      - name: npm tag(release)
+        if: contains(github.event.pull_request.labels.*.name, 'PR:release')
+        run: |
+          npm version prerelease
+
+      - name: Push
+        run: |
+          git push --all
+          git push --tags
