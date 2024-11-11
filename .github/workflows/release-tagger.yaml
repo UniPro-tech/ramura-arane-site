@@ -59,7 +59,7 @@ jobs:
         continue-on-error: true
 
       - name: Send Discord Notification
-        if: failure()  # Rebaseが失敗した場合のみ実行
+        if: failure()
         run: |
           curl -H "Content-Type: application/json" \
                -X POST \
@@ -68,7 +68,7 @@ jobs:
                       {
                         "title": "🚨 Rebase Conflict Detected!",
                         "description": "A rebase conflict occurred in the `develop` branch after merging into `main`. Please resolve it manually.",
-                        "url": "https://github.com/UniPro-tech/ramura-utau-site",  # リポジトリのURLを設定
+                        "url": "https://github.com/UniPro-tech/ramura-utau-site",
                         "color": 16711680,
                         "fields": [
                           {
@@ -92,5 +92,5 @@ jobs:
         run: |
           git push --all
           git push --tags
-          git checkout dev
+          git checkout main
           git push --all
