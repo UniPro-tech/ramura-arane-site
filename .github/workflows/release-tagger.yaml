@@ -87,3 +87,10 @@ jobs:
                     ]
                   }' \
                ${{ secrets.DISCORD_WEBHOOK_URL }}
+          git push --tags
+          git checkout main
+          git pull
+          git checkout dev
+          git pull
+          git rebase main
+          git push --all
