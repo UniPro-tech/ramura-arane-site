@@ -1,0 +1,33 @@
+name: Auto Version Tag
+on:
+  pull_request:
+    branches:
+      - dev
+    types:
+      - closed
+
+jobs:
+  Tagging:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    strategy:
+      matrix:
+        label: [major, minor, patch, release]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: npm tag
+        if: contains(github.event.pull_request.labels.*.name, 'PR:${{ matrix.label }}')
+        run: |
+          npm version ${{ matrix.label }}
+          git push --follow-tags
+      
+      - name: rebase
+        run: |
+          git checkout main
+          git pull
+          git checkout dev
+          git pull
+          git rebase main
+          git push
