@@ -79,7 +79,9 @@ jobs:
                     ]
                   }' \
                ${{ secrets.DISCORD_WEBHOOK_URL }}
+            git reset --merge
       - name: Push changes
+        if: failure()
         run: |
           git push --all
           git push --tags
