@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: registry.uniproject-tech.net/arane-site:4.3.0
+          image: registry.uniproject-tech.net/arane-site:4.2.4
           ports:
             - containerPort: 3000
           resources:
