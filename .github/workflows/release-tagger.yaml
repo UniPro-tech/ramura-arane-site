@@ -52,6 +52,7 @@ jobs:
 
       - name: Rebase onto main
         run: |
+          git checkout -b ${{ github.event.pull_request.head.ref }} origin/${{ github.event.pull_request.head.ref }}
           git checkout dev
           git merge  --no-ff ${{ github.event.pull_request.head.ref }}
           git branch -d ${{ github.event.pull_request.head.ref }}
