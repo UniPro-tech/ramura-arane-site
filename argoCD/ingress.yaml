@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: arane-dev.uniproject-tech.net
+    - host: arane.uniproject-tech.net
       http:
         paths:
           - path: /
