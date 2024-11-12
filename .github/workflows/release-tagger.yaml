@@ -50,12 +50,12 @@ jobs:
       - name: Fetch all branches
         run: git fetch origin
 
-      - name: Checkout develop branch
-        run: git checkout dev
-
       - name: Rebase onto main
         run: |
-          git rebase origin/main
+          git checkout develop
+          git merge  --no-ff ${{ github.event.pull_request.head.ref }}
+          git branch -d ${{ github.event.pull_request.head.ref }}
+          git push --delete origin ${{ github.event.pull_request.head.ref }}
 
       - name: Send Discord Notification
         if: failure()
@@ -96,3 +96,4 @@ jobs:
           git reset --merge
           git checkout main
           git push --all
+          git push --tags
