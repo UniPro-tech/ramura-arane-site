@@ -3,13 +3,13 @@ kind: Ingress
 metadata:
   name: arane-site-ingress
   annotations:
-    cert-manager.io/cluster-issuer: le-cf-prod
+    cert-manager.io/cluster-issuer: le-cf-staging
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
 spec:
   ingressClassName: nginx
   rules:
-    - host: arane.uniproject-tech.net
+    - host: arane-dev.uniproject-tech.net
       http:
         paths:
           - path: /
@@ -21,5 +21,5 @@ spec:
                   number: 80
   tls:
     - hosts:
-        - arane.uniproject-tech.net
+        - arane-dev.uniproject-tech.net
       secretName: arane-site-tls

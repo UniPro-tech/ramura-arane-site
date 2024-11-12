@@ -13,7 +13,8 @@ spec:
     spec:
       containers:
         - name: app
-          image: registry.uniproject-tech.net/arane-site:4.2.4
+          imagePullPolicy: Always
+          image: registry.uniproject-tech.net/arane-site:stable
           ports:
             - containerPort: 3000
           resources:
