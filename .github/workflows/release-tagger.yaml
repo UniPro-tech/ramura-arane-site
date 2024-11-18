@@ -56,7 +56,6 @@ jobs:
           git checkout dev
           git merge  --no-ff ${{ github.event.pull_request.head.ref }}
           git branch -d ${{ github.event.pull_request.head.ref }}
-          git push --delete origin ${{ github.event.pull_request.head.ref }}
 
       - name: Send Discord Notification
         if: failure()
@@ -89,6 +88,12 @@ jobs:
                   }' \
                ${{ secrets.DISCORD_WEBHOOK_URL }}
             git reset --merge
+      
+      - name: Delete branch
+        run: |
+          git push origin --delete ${{ github.event.pull_request.head.ref }}
+        continue-on-error: true
+
       - name: Push changes
         run: |
           git push --all

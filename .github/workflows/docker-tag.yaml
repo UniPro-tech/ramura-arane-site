@@ -26,7 +26,7 @@ jobs:
           password: ${{ secrets.HARBOR_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:${{ env.TAG_NAME }} .
+        run: docker build -t ${{ secrets.K8S_DOCKER_REGISTHOST }}/hp-infra/arane-site:${{ env.TAG_NAME }} .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.K8S_DOCKER_REGISTHOST }}/arane-site:${{ env.TAG_NAME }}
+        run: docker push ${{ secrets.K8S_DOCKER_REGISTHOST }}/hp-infra/arane-site:${{ env.TAG_NAME }}
