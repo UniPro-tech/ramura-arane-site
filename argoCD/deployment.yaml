@@ -24,7 +24,7 @@ spec:
         - name: zip-pvc
           persistentVolumeClaim:
             claimName: zip
-      imagePullSecrets:
+      imagePullSecrets: 
         - name: harbor-registry-secret
 ---
 apiVersion: v1
