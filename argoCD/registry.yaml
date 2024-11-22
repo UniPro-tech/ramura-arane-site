@@ -1,0 +1,16 @@
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: harbor-registry-secret
+  namespace: arane-site
+spec:
+  encryptedData:
+    .dockerconfigjson: AgBhwVCHaUuHgRqTsDc3sLx3i+PMykeTfgo8D/h5xdPUZ6ZDBIjWkpM77lNbBn12x8GstGqq7bm6esgqnPsKrb7F+soQFGJP2f9gujxAD+GdTlp6jeg+PlXIjNMOXvRBR0KbOqmaraxm8jABPUDiVqzZgzUTdTsikD6Ie8xcIs/L4xOZusbu/nyIadHuIBh2MC65navcWk/7+XlEkRbACg41MJmwAUVp18H8pr0Qu1alJpfa1lv+N9VZpx7B5Bs0QVdK9vgVtGUteGT3MjYRwjTld6Cms3SdhaVu5Xc0fth/eHDNvoCbjiCKkRjic3hbj7RO+M4XA34Pi7sk9MTZg8nlAhzIIoBhabw5mkVfFy1XmtH6jX2bJkrRI/A1LcHLRlU7IqEYi6VbCaHNvPBPGHCkc5TjQW4QRsDuGU3HKsZ8t6SARtGOPyYR05SiveU5OHT/C9qe5BPMXG21qwOOWuCdG0YCwdl0Rxg/uzVHs2cWUM1i+WkSIpEVxyy4Xd7zzi3Tq1yHXK2S03eVMIcCMPv4CuQ8Juety0YJch1dKzUnEuC7fkIgPQlwiWRLNxwsUYCwsokvK67265DslgYXqvuX9ZXeX+xutggzOK/7csPhiKXE8tIvRF/RWSkXgTq3lUM3A6afN774SsesHdypIBfi0ZHt1KTzrFGJeka8B2db2vy4BMlunXbWJPQ+JBQLWCRJtbLtIhejz/UAqgp2g0nhu/7Hfj6MPKHE6a7WcNxVi0Dkq27eWfWTL2B28covSgdluLH0ZWf2Swk68igbdTuAYsQn0nWrROQL/voyciXYusVnsQCih3Dtf+iE3UfkbPpGLB3/i+5dhhUQbetIsWGJ/PwgvYnzPCZ4OOObRuIM+Z5pUCmziDKiEfaUT9zPoDSnlomygWL1JYNFdBrO4QzVxL9HUHh7UQRH/ddw1tUmogrdeo4tDhtpUy3gAJjy3sxCTcgfJsc4Kg==
+  template:
+    metadata:
+      creationTimestamp: null
+      name: harbor-registry-secret
+      namespace: arane-site
+    type: kubernetes.io/dockerconfigjson
