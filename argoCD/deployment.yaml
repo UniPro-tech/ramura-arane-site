@@ -13,26 +13,19 @@ spec:
     spec:
       containers:
         - name: app
-          image: registry.uniproject-tech.net/arane-site:4.2.1
+          imagePullPolicy: Always
+          image: registry.uniproject-tech.net/hp-infra/arane-site:stable
           ports:
             - containerPort: 3000
-          resources:
-            limits:
-              memory: "512Mi"
-              cpu: "500m"
-            requests:
-              memory: "128Mi"
-              cpu: "250m"
           volumeMounts:
             - name: zip-pvc
               mountPath: /nextjs/public/assets
-          env:
-          - name: TZ
-            value: Asia/Tokyo
       volumes:
         - name: zip-pvc
           persistentVolumeClaim:
             claimName: zip
+      imagePullSecrets: 
+        - name: harbor-registry-secret
 ---
 apiVersion: v1
 kind: Service
