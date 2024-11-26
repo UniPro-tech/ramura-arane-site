@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteTitle } from "../site-config";
 import Image from "next/image";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <header className="bg-gray-800 text-white">
           <nav className="flex items-center justify-between p-4">
-            <a href="/">
+            <Link href="/">
               <h1 className="text-2xl font-bold">
                 <Image
                   src="/images/title.webp"
@@ -32,19 +33,19 @@ export default function RootLayout({
                   height={100}
                 ></Image>
               </h1>
-            </a>
+            </Link>
             <ul className="flex right-4 text-right space-x-5">
               <li>
-                <a href="/about">About</a>
+                <Link href="/about">About</Link>
               </li>
               <li>
-                <a href="/download">Download</a>
+                <Link href="/download">Download</Link>
               </li>
               <li>
-                <a href="/license">License</a>
+                <Link href="/license">License</Link>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </nav>
