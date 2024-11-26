@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Download - 荒音の夜 - UTAU配布サイト',
     description: 'UTAU音源「現音令彼(あらねしむか)」のダウンロードはこちらから。ダウンロード前に、利用規約をご一読ください。',
-    url: 'https://arane.uniproject-tech.net/download',
+    url: 'https://arane.uniproject.jp/download',
     siteName: '荒音の夜 - 現音令彼(あらねしむか)公式サイト',
     images: [
       {
-        url: 'https://arane.uniproject-tech.net/images/title.webp',
+        url: 'https://arane.uniproject.jp/images/title.webp',
         width: 800,
         height: 600,
       }

@@ -15,14 +15,14 @@ const jsonLd: WithContext<JsonLDArticle | JsonLDWebPage> = {
   '@type': 'WebPage',
   name: 'About - 荒音の夜 - UTAU配布サイト',
   description: '現音令彼(あらねしむか)の公式設定についての情報です。使用する前にご一読ください。',
-  url: 'https://arane.uniproject-tech.net/about',
+  url: 'https://arane.uniproject.jp/about',
   inLanguage: 'ja',
   image: {
     '@type': 'ImageObject',
-    url: 'https://arane.uniproject-tech.net/images/title.webp',
-    license: "https://arane.uniproject-tech.net/license",
+    url: 'https://arane.uniproject.jp/images/title.webp',
+    license: "https://arane.uniproject.jp/license",
     creditText: "ramura 2024",
-    acquireLicensePage: "https://arane.uniproject-tech.net/license",
+    acquireLicensePage: "https://arane.uniproject.jp/license",
     creator: {
       '@type': "Person",
       name: "ramura",
@@ -38,11 +38,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: '荒音の夜 - 現音令彼UTAU音源公式サイト',
     description: '『現音令彼』 - らむらによるUTAU音源の公式情報サイト。公式設定、ダウンロードの方法などをお届けします！！',
-    url: 'https://arane.uniproject-tech.net',
+    url: 'https://arane.uniproject.jp',
     siteName: '荒音の夜 - 現音令彼(あらねしむか)公式サイト',
     images: [
       {
-        url: 'https://arane.uniproject-tech.net/images/title.webp',
+        url: 'https://arane.uniproject.jp/images/title.webp',
         width: 800,
         height: 600,
       }
