@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     locale: 'ja_JP',
     type: 'website',
   },
+  alternates: {
+    canonical: "https://arane.uniproject.jp/download",
+  },
 };
 
 export default function Home() {

@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     locale: 'ja_JP',
     type: 'website',
   },
+  alternates: {
+    canonical: "https://arane.uniproject.jp/contact",
+  },
 };
 
 export default function Home() {
