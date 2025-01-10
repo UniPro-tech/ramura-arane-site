@@ -41,27 +41,25 @@ export default function Home() {
         <div className="flex flex-wrap">
           <Button<"Link">
             href="/download/dl-endpoint?file=tandokuon.zip"
-            className="mt-4"
+            className="mt-4 flex-grow"
           >
-            単独音(4音階)
+            単独音
           </Button>
           <Button<"Link">
             href="/download/dl-endpoint?file=renzokuon.zip"
-            className="mt-4"
+            className="mt-4 flex-grow"
           >
-            連続音(1音階)
+            連続音
           </Button>
-        </div>
-        <div className="flex">
           <Button<"Link">
             href="/download/dl-endpoint?file=tougou.zip"
-            className="mt-4"
+            className="mt-4 flex-grow"
           >
-            統合音源(連続1音階/単独音4音階)
+            統合音源
           </Button>
           <Button<"Link">
             href="/download/dl-endpoint?file=tokushu.zip"
-            className="mt-4"
+            className="mt-4 flex-grow"
           >
             特殊音源
           </Button>
