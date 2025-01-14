@@ -23,11 +23,11 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.K8S_DOCKER_REGISTHOST }}/hp-infra/arane-site:beta .
-          docker build -t ${{ secrets.K8S_DOCKER_REGISTHOST }}/hp-infra/arane-site:latest .
+          docker build -t registry.uniproject.jp/hp-infra/arane-site:beta .
+          docker build -t registry.uniproject.jp/hp-infra/arane-site:latest .
         id: build
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.K8S_DOCKER_REGISTHOST }}/hp-infra/arane-site:beta
-          docker push ${{ secrets.K8S_DOCKER_REGISTHOST }}/hp-infra/arane-site:latest
+          docker push registry.uniproject.jp/hp-infra/arane-site:beta
+          docker push registry.uniproject.jp/hp-infra/arane-site:latest
