@@ -14,7 +14,7 @@ spec:
       containers:
         - name: app
           imagePullPolicy: Always
-          image: registry.uniproject-tech.net/hp-infra/arane-site:4.3.0
+          image: registry.uniproject.jp/hp-infra/arane-site:4.3.0
           ports:
             - containerPort: 3000
           volumeMounts:
