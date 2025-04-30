@@ -14,7 +14,7 @@ spec:
       containers:
         - name: app
           imagePullPolicy: Always
-          image: registry.uniproject.jp/hp-infra/arane-site:4.3.0
+          image: registry.uniproject.jp/hp-infra/arane-site:4.3.1
           ports:
             - containerPort: 3000
           volumeMounts:
@@ -24,7 +24,7 @@ spec:
         - name: zip-pvc
           persistentVolumeClaim:
             claimName: zip
-      imagePullSecrets: 
+      imagePullSecrets:
         - name: harbor-registry-secret
 ---
 apiVersion: v1
@@ -36,6 +36,6 @@ spec:
   selector:
     app: arane
   ports:
-  - port: 80
-    targetPort: 3000
+    - port: 80
+      targetPort: 3000
   type: LoadBalancer
