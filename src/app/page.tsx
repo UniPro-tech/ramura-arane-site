@@ -65,7 +65,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <main className="flex flex-col min-h-screen bg-[#111111]">
+      <main className="flex flex-col min-h-screen bg-[#111111] bg-custom-gradient">
         <section className="relative h-screen w-full overflow-hidden px-4">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-blue-900/30 to-black animate-gradient-x" />
           <div className="relative flex flex-col md:flex-row items-center px-4 md:px-20 h-full max-w-7xl mx-auto h-screen justify-center">
