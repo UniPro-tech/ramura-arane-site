@@ -2,22 +2,21 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contacts - 荒音の夜 - UTAU配布サイト",
-  description:
-    "音源、サイトに関するお問い合わせ先です。",
+  description: "音源、サイトに関するお問い合わせ先です。",
   openGraph: {
-    title: 'Contact - 荒音の夜 - UTAU配布サイト',
-    description: '音源、サイトに関するお問い合わせ先です。',
-    url: 'https://arane.uniproject.jp/contact',
-    siteName: '荒音の夜 - 現音令彼(あらねしむか)公式サイト',
+    title: "Contact - 荒音の夜 - UTAU配布サイト",
+    description: "音源、サイトに関するお問い合わせ先です。",
+    url: "https://arane.uniproject.jp/contact",
+    siteName: "荒音の夜 - 現音令彼(あらねしむか)公式サイト",
     images: [
       {
-        url: 'https://arane.uniproject.jp/images/title.webp',
+        url: "https://arane.uniproject.jp/images/title.webp",
         width: 800,
         height: 600,
-      }
+      },
     ],
-    locale: 'ja_JP',
-    type: 'website',
+    locale: "ja_JP",
+    type: "website",
   },
   alternates: {
     canonical: "https://arane.uniproject.jp/contact",

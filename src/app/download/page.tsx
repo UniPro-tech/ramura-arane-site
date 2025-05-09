@@ -8,19 +8,20 @@ export const metadata: Metadata = {
   description:
     "UTAU音源「現音令彼(あらねしむか)」のダウンロードはこちらから。ダウンロード前に、利用規約をご一読ください。",
   openGraph: {
-    title: 'Download - 荒音の夜 - UTAU配布サイト',
-    description: 'UTAU音源「現音令彼(あらねしむか)」のダウンロードはこちらから。ダウンロード前に、利用規約をご一読ください。',
-    url: 'https://arane.uniproject.jp/download',
-    siteName: '荒音の夜 - 現音令彼(あらねしむか)公式サイト',
+    title: "Download - 荒音の夜 - UTAU配布サイト",
+    description:
+      "UTAU音源「現音令彼(あらねしむか)」のダウンロードはこちらから。ダウンロード前に、利用規約をご一読ください。",
+    url: "https://arane.uniproject.jp/download",
+    siteName: "荒音の夜 - 現音令彼(あらねしむか)公式サイト",
     images: [
       {
-        url: 'https://arane.uniproject.jp/images/title.webp',
+        url: "https://arane.uniproject.jp/images/title.webp",
         width: 800,
         height: 600,
-      }
+      },
     ],
-    locale: 'ja_JP',
-    type: 'website',
+    locale: "ja_JP",
+    type: "website",
   },
   alternates: {
     canonical: "https://arane.uniproject.jp/download",
@@ -33,8 +34,10 @@ export default function Home() {
       <div>
         <h1 className="text-4xl text-white font-bold">Download</h1>
         <p className="text-white">
-          ダウンロードする前に、一度、利用規約をお読みください。<br />
-          なお、特殊音源に関しては、単体では使用できません。<br />
+          ダウンロードする前に、一度、利用規約をお読みください。
+          <br />
+          なお、特殊音源に関しては、単体では使用できません。
+          <br />
           特殊音素のエイリアスはEです。
         </p>
         <br />

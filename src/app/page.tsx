@@ -4,18 +4,13 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 const Niconico = dynamic(() => import("@/components/nicoVideoPlayer"));
 
-import {
-  Article as JsonLDArticle,
-  WebPage as JsonLDWebPage,
-  WithContext,
-} from "schema-dts";
+import { Article as JsonLDArticle, WebPage as JsonLDWebPage, WithContext } from "schema-dts";
 
 const jsonLd: WithContext<JsonLDArticle | JsonLDWebPage> = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "About - 荒音の夜 - UTAU配布サイト",
-  description:
-    "現音令彼(あらねしむか)の公式設定についての情報です。使用する前にご一読ください。",
+  description: "現音令彼(あらねしむか)の公式設定についての情報です。使用する前にご一読ください。",
   url: "https://arane.uniproject.jp/about",
   inLanguage: "ja",
   image: {
@@ -73,9 +68,7 @@ export default function Home() {
               <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold text-white font-BIZMincho leading-none animate-fade-in text-center md:text-left">
                 <ruby>
                   現音令彼
-                  <rt className="text-sm md:text-lg text-purple-300">
-                    あらねしむか
-                  </rt>
+                  <rt className="text-sm md:text-lg text-purple-300">あらねしむか</rt>
                 </ruby>
               </h1>
               <div className="grid grid-cols-2 gap-3 md:gap-4 w-full max-w-sm mx-auto md:mx-0">
@@ -126,10 +119,18 @@ export default function Home() {
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="transform hover:scale-105 transition-all duration-300">
-                <Niconico id="sm43893594" width={640} height={360} />
+                <Niconico
+                  id="sm43893594"
+                  width={640}
+                  height={360}
+                />
               </div>
               <div className="transform hover:scale-105 transition-all duration-300">
-                <Niconico id="sm44014847" width={640} height={360} />
+                <Niconico
+                  id="sm44014847"
+                  width={640}
+                  height={360}
+                />
               </div>
             </div>
           </div>

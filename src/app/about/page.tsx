@@ -1,17 +1,12 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import {
-  Article as JsonLDArticle,
-  WebPage as JsonLDWebPage,
-  WithContext,
-} from "schema-dts";
+import { Article as JsonLDArticle, WebPage as JsonLDWebPage, WithContext } from "schema-dts";
 
 const jsonLd: WithContext<JsonLDArticle | JsonLDWebPage> = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "About - 荒音の夜 - UTAU配布サイト",
-  description:
-    "現音令彼(あらねしむか)の公式設定についての情報です。使用する前にご一読ください。",
+  description: "現音令彼(あらねしむか)の公式設定についての情報です。使用する前にご一読ください。",
   url: "https://arane.uniproject.jp/about",
   inLanguage: "ja",
   isPartOf: {
@@ -35,12 +30,10 @@ const jsonLd: WithContext<JsonLDArticle | JsonLDWebPage> = {
 
 export const metadata: Metadata = {
   title: "About - 荒音の夜 - UTAU配布サイト",
-  description:
-    "現音令彼(あらねしむか)の公式設定についての情報です。使用する前にご一読ください。",
+  description: "現音令彼(あらねしむか)の公式設定についての情報です。使用する前にご一読ください。",
   openGraph: {
     title: "About - 荒音の夜 - UTAU配布サイト",
-    description:
-      "現音令彼(あらねしむか)の公式設定についての情報です。使用する前にご一読ください。",
+    description: "現音令彼(あらねしむか)の公式設定についての情報です。使用する前にご一読ください。",
     url: "https://arane.uniproject.jp/about",
     siteName: "荒音の夜 - 現音令彼(あらねしむか)公式サイト",
     images: [
@@ -71,9 +64,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-blue-900/30 to-black animate-gradient-x" />
           <div className="relative flex flex-col md:flex-row items-center px-4 md:px-20 h-full max-w-7xl mx-auto h-screen justify-center">
             <div className="flex flex-col space-y-8 z-10 w-full md:w-1/2">
-              <h1 className="text-6xl font-bold text-center md:text-left">
-                About
-              </h1>
+              <h1 className="text-6xl font-bold text-center md:text-left">About</h1>
               <ul className="text-lg leading-8 p-6 bg-white/10 rounded-lg shadow-lg backdrop-blur-md">
                 <li>
                   <strong>名前:</strong>{" "}

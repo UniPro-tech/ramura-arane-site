@@ -52,10 +52,7 @@ export default function RootLayout({
         </header>
         {children}
         <footer className="p-4 bg-gray-800 text-white text-center">
-          <p>
-            &copy; Yuito Akatsuki 2024, ramura 2024. Designed by Mitsuru
-            Akatsuki
-          </p>
+          <p>&copy; Yuito Akatsuki 2024, ramura 2024. Designed by Mitsuru Akatsuki</p>
         </footer>
       </body>
     </html>

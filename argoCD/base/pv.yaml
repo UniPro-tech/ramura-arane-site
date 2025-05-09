@@ -18,7 +18,6 @@ spec:
     name: zip
 
 ---
-
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:

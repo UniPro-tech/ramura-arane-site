@@ -36,7 +36,11 @@ export const Button = forwardRef<HTMLButtonElement, Props<AS>>((props, ref) => {
   // buttonタグとしてレンダリング
   const buttonAttributes = props as ButtonProps;
   return (
-    <button ref={ref} className={styles.commonDesign} {...buttonAttributes}>
+    <button
+      ref={ref}
+      className={styles.commonDesign}
+      {...buttonAttributes}
+    >
       {buttonAttributes.children}
     </button>
   );
