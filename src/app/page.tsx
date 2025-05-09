@@ -135,6 +135,31 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="py-20 bg-black/90">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-4xl font-bold text-white mb-8 font-BIZMincho">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
+                相互リンク
+              </span>
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <a
+                href="https://yuito-it.jp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block transform hover:scale-105 transition-transform duration-300"
+              >
+                <Image
+                  src="/images/banners/yuitopia.gif"
+                  alt="yuitopia"
+                  width={200}
+                  height={40}
+                  className="rounded-lg shadow-lg"
+                />
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
