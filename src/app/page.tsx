@@ -63,7 +63,7 @@ export default function Home() {
       <main className="flex flex-col min-h-screen bg-[#111111] bg-custom-gradient">
         <section className="relative h-screen w-full overflow-hidden px-4">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-blue-900/30 to-black animate-gradient-x" />
-          <div className="relative flex flex-col md:flex-row items-center px-4 md:px-20 h-full max-w-7xl mx-auto h-screen justify-center">
+          <div className="relative flex flex-col md:flex-row items-center px-4 md:px-20 h-full max-w-7xl mx-auto min-h-screen justify-center">
             <div className="flex flex-col space-y-8 z-10 w-full md:w-1/2">
               <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold text-white font-BIZMincho leading-none animate-fade-in text-center md:text-left">
                 <ruby>
