@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { siteTitle } from "../site-config";
-import Image from "next/image";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Link from "next/link";
+import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,41 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <GoogleAnalytics gaId={"G-301PMSJ9EB"} />
       <body className={inter.className}>
-        <header className="bg-gray-800 text-white">
-          <nav className="flex items-center justify-between p-4">
-            <Link href="/">
-              <h1 className="text-2xl font-bold">
-                <Image
-                  src="/images/title.webp"
-                  alt="荒音の夜(サイトロゴ)"
-                  width={100}
-                  height={100}
-                ></Image>
-              </h1>
-            </Link>
-            <ul className="flex right-4 text-right space-x-5">
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-              <li>
-                <Link href="/download">Download</Link>
-              </li>
-              <li>
-                <Link href="/license">License</Link>
-              </li>
-              <li>
-                <Link href="/contact">Contact</Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
+        <Header />
         {children}
         <footer className="p-4 bg-gray-800 text-white text-center">
           <p>&copy; Yuito Akatsuki 2024, ramura 2024. Designed by Mitsuru Akatsuki</p>
         </footer>
       </body>
+      <GoogleAnalytics gaId={"G-301PMSJ9EB"} />
     </html>
   );
 }
