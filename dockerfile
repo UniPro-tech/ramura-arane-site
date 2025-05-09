@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM oven/bun:latest
 
 WORKDIR /nextjs
 
@@ -9,4 +9,4 @@ RUN rm -rf .next
 RUN bun install
 RUN bun run build
 
-CMD ["npm", "start"]
+CMD ["bun", "start"]
