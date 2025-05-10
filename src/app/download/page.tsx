@@ -34,7 +34,7 @@ export default function Home() {
       <section className="relative min-h-screen w-full overflow-hidden px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-blue-900/30 to-black animate-gradient-x" />
         <div className="relative flex flex-col md:flex-row items-center px-4 md:px-20 h-full max-w-7xl mx-auto h-screen justify-center my-10">
-          <div className="flex flex-col space-y-8 z-10 w-full md:w-1/2">
+          <div className="flex flex-col space-y-8 z-10 w-full md:w-1/2 text-white">
             <h1 className="text-6xl font-bold text-center md:text-left">Download</h1>
             <p className="text-lg leading-8 p-6 bg-white/10 rounded-lg shadow-lg backdrop-blur-md">
               ダウンロードする前に、一度、利用規約をお読みください。
