@@ -25,7 +25,7 @@ spec:
           persistentVolumeClaim:
             claimName: zip
       imagePullSecrets:
-        - name: harbor-registry-secret
+        - name: internal-harbor
 ---
 apiVersion: v1
 kind: Service
