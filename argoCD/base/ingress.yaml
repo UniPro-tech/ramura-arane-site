@@ -4,10 +4,10 @@ metadata:
   name: arane-site-ingress
   annotations:
     cert-manager.io/cluster-issuer: le-cf-staging
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   rules:
     - host: arane.uniproject.jp
       http:
