@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact - 荒音の夜 - UTAU配布サイト",
     description: "音源、サイトに関するお問い合わせ先です。",
-    url: "https://arane.uniproject.jp/contact",
+    url: "https://ramura.uniproject.jp/arane/contact",
     siteName: "荒音の夜 - 現音令彼(あらねしむか)公式サイト",
     images: [
       {
-        url: "https://arane.uniproject.jp/images/title.webp",
+        url: "https://ramura.uniproject.jp/arane/images/title.webp",
         width: 800,
         height: 600,
       },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://arane.uniproject.jp/contact",
+    canonical: "https://ramura.uniproject.jp/arane/contact",
   },
 };
 

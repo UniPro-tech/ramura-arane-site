@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "License - 荒音の夜 - UTAU配布サイト",
     description: "現音令彼(あらねしむか)の利用規約です。使用する際はご一読ください。",
-    url: "https://arane.uniproject.jp/license",
+    url: "https://ramura.uniproject.jp/arane/license",
     siteName: "荒音の夜 - 現音令彼(あらねしむか)公式サイト",
     images: [
       {
-        url: "https://arane.uniproject.jp/images/title.webp",
+        url: "https://ramura.uniproject.jp/arane/images/title.webp",
         width: 800,
         height: 600,
       },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://arane.uniproject.jp/license",
+    canonical: "https://ramura.uniproject.jp/arane/license",
   },
 };
 

@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /private/
 Disallow: /_next/
 Disallow: /assets/
-Sitemap: https://arane.uniproject.jp/sitemap.xml
+Sitemap: https://ramura.uniproject.jp/arane/sitemap.xml

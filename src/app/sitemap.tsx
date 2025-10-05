@@ -3,23 +3,23 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://arane.uniproject.jp/",
+      url: "https://ramura.uniproject.jp/arane/",
       priority: 1,
     },
     {
-      url: "https://arane.uniproject.jp/about",
+      url: "https://ramura.uniproject.jp/arane/about",
       priority: 0.8,
     },
     {
-      url: "https://arane.uniproject.jp/license",
+      url: "https://ramura.uniproject.jp/arane/license",
       priority: 0.5,
     },
     {
-      url: "https://arane.uniproject.jp/download",
+      url: "https://ramura.uniproject.jp/arane/download",
       priority: 0.8,
     },
     {
-      url: "https://arane.uniproject.jp/contact",
+      url: "https://ramura.uniproject.jp/arane/contact",
       priority: 0.5,
     },
   ];
