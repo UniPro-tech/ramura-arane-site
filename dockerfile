@@ -4,6 +4,8 @@ WORKDIR /nextjs
 
 COPY . .
 
+RUN apt-get update && apt-get install -y curl
+
 RUN curl -fsSL https://bun.sh/install | bash
 
 RUN rm -rf node_modules
