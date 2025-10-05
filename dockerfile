@@ -1,4 +1,4 @@
-FROM node:24-debian
+FROM node:24-bookworm
 
 WORKDIR /nextjs
 
