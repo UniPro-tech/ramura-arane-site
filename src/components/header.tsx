@@ -19,7 +19,7 @@ export default function Header() {
             className="flex items-center space-x-2"
           >
             <Image
-              src="/images/title.webp"
+              src="/arane/images/title.webp"
               alt="荒音の夜(サイトロゴ)"
               width={60}
               height={60}

@@ -101,7 +101,7 @@ export default function Home() {
             <div className="mt-8 md:mt-0 w-3/4 md:w-1/2 relative z-10">
               <Image
                 className="transform hover:scale-105 transition-transform duration-500 drop-shadow-2xl"
-                src="/images/fullbody.webp"
+                src="/arane/images/fullbody.webp"
                 alt="現音令彼"
                 priority={true}
                 width={600}
@@ -150,7 +150,7 @@ export default function Home() {
                 className="block transform hover:scale-105 transition-transform duration-300"
               >
                 <Image
-                  src="/images/banners/yuitopia.gif"
+                  src="/arane/images/banners/yuitopia.gif"
                   alt="yuitopia"
                   width={200}
                   height={40}
