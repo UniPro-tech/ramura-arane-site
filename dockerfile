@@ -7,6 +7,6 @@ COPY . .
 RUN rm -rf node_modules
 RUN rm -rf .next
 RUN bun install
-RUN bun run build
+RUN npm run build
 
 CMD ["bun", "start"]
