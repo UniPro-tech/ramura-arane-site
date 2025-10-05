@@ -1,6 +1,8 @@
-FROM oven/bun:latest
+FROM node:24-slim
 
 WORKDIR /nextjs
+
+RUN curl -fsSL https://bun.sh/install | bash
 
 COPY . .
 
