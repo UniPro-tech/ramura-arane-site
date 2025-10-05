@@ -22,5 +22,5 @@ export async function GET(request: NextRequest) {
     "Content-Disposition": `attachment; filename=${fileName}`,
   });
 
-  return new NextResponse(fileContent, { headers });
+  return new NextResponse(new Uint8Array(fileContent), { headers });
 }
