@@ -1,10 +1,8 @@
-FROM node:24-slim
+FROM node:24-debian
 
 WORKDIR /nextjs
 
 COPY . .
-
-RUN apt-get update && apt-get install -y curl
 
 RUN curl -fsSL https://bun.sh/install | bash
 
