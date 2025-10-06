@@ -77,7 +77,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="https://ramura.uniproject.jp/contact"
+                href="https://ramura.uniproject.jp/contacts"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white hover:underline transition-colors"

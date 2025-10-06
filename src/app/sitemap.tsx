@@ -14,9 +14,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://ramura.uniproject.jp/arane/download",
       priority: 0.8,
     },
-    {
-      url: "https://ramura.uniproject.jp/arane/contact",
-      priority: 0.5,
-    },
   ];
 }

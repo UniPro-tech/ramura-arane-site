@@ -93,7 +93,8 @@ export default function Home() {
                   License
                 </Button>
                 <Button<"Link">
-                  href="/contact"
+                  href="https://ramura.uniproject.jp/contacts"
+                  target="_blank"
                   className="text-sm md:text-base bg-violet-600/80 hover:bg-violet-500 backdrop-blur-sm transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
                 >
                   Contacts
