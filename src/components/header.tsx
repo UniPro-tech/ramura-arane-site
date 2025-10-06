@@ -77,7 +77,9 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/contact"
+                href="https://ramura.uniproject.jp/contact"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white hover:underline transition-colors"
               >
                 Contact
@@ -125,9 +127,11 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/contact"
+                href="https://ramura.uniproject.jp/contacts"
                 className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors"
                 onClick={() => setIsMenuOpen(false)}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Contact
               </Link>
