@@ -17,8 +17,8 @@ const jsonLd: WithContext<JsonLDArticle | JsonLDWebPage> = {
   image: {
     "@type": "ImageObject",
     url: "https://ramura.uniproject.jp/arane/images/title.webp",
-    license: "https://ramura.uniproject.jp/arane/license",
-    acquireLicensePage: "https://ramura.uniproject.jp/arane/license",
+    license: "https://ramura.uniproject.jp/license",
+    acquireLicensePage: "https://ramura.uniproject.jp/license",
     creditText: "ramura 2024",
     creator: {
       "@type": "Person",

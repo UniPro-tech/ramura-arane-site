@@ -67,7 +67,9 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/license"
+                href="https://ramura.uniproject.jp/license"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white hover:underline transition-colors"
               >
                 License
@@ -112,7 +114,9 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/license"
+                href="https://ramura.uniproject.jp/license"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >

@@ -16,9 +16,9 @@ const jsonLd: WithContext<JsonLDArticle | JsonLDWebPage> = {
   image: {
     "@type": "ImageObject",
     url: "https://ramura.uniproject.jp/arane/images/title.webp",
-    license: "https://ramura.uniproject.jp/arane/license",
+    license: "https://ramura.uniproject.jp/license",
     creditText: "ramura 2024",
-    acquireLicensePage: "https://ramura.uniproject.jp/arane/license",
+    acquireLicensePage: "https://ramura.uniproject.jp/license",
     creator: {
       "@type": "Person",
       name: "ramura",
@@ -85,7 +85,9 @@ export default function Home() {
                   Download
                 </Button>
                 <Button<"Link">
-                  href="/license"
+                  href="https://ramura.uniproject.jp/license"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm md:text-base bg-indigo-600/80 hover:bg-indigo-500 backdrop-blur-sm transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
                 >
                   License
