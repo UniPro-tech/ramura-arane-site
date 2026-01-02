@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ComponentPropsWithoutRef, Ref, forwardRef } from "react";
+import type { ReactElement } from "react";
 const styles = {
   commonDesign: "border-b text-white px-4 py-2 leading-none m-2",
   linkDisabled: "opacity-50 cursor-not-allowed leading-none",
@@ -44,4 +45,4 @@ export const Button = forwardRef<HTMLButtonElement, Props<AS>>((props, ref) => {
       {buttonAttributes.children}
     </button>
   );
-}) as <T extends "button" | "Link" = "button">(p: Props<T>) => JSX.Element;
+}) as <T extends "button" | "Link" = "button">(p: Props<T>) => ReactElement;
