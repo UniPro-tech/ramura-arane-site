@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-gray-800/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 bg-gray-800/95 backdrop-blur-xs">
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link
@@ -28,7 +28,7 @@ export default function Header() {
           </Link>
 
           <button
-            className="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+            className="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-hidden"
             onClick={toggleMenu}
             aria-label="メニューを開く"
           >
@@ -89,7 +89,7 @@ export default function Header() {
         </div>
 
         <div
-          className={`md:hidden absolute top-16 left-0 right-0 bg-gray-800/95 backdrop-blur-sm transform transition-all duration-300 ease-in-out ${
+          className={`md:hidden absolute top-16 left-0 right-0 bg-gray-800/95 backdrop-blur-xs transform transition-all duration-300 ease-in-out ${
             isMenuOpen
               ? "opacity-100 translate-y-0"
               : "opacity-0 -translate-y-2 pointer-events-none"

@@ -62,7 +62,7 @@ export default function Home() {
       />
       <main className="flex flex-col min-h-screen bg-[#111111] bg-custom-gradient">
         <section className="relative min-h-screen w-full overflow-hidden px-4">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-blue-900/30 to-black animate-gradient-x" />
+          <div className="absolute inset-0 bg-linear-to-br from-purple-900/30 via-blue-900/30 to-black animate-gradient-x" />
           <div className="relative flex flex-col md:flex-row items-center px-4 md:px-20 h-full max-w-7xl mx-auto min-h-screen justify-center">
             <div className="flex flex-col space-y-8 z-10 w-full md:w-1/2">
               <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold text-white font-BIZMincho leading-none animate-fade-in text-center md:text-left">
@@ -74,13 +74,13 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-3 md:gap-4 w-full max-w-sm mx-auto md:mx-0">
                 <Button<"Link">
                   href="/about"
-                  className="text-sm md:text-base bg-purple-600/80 hover:bg-purple-500 backdrop-blur-sm transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
+                  className="text-sm md:text-base bg-purple-600/80 hover:bg-purple-500 backdrop-blur-xs transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
                 >
                   About
                 </Button>
                 <Button<"Link">
                   href="/download"
-                  className="text-sm md:text-base bg-blue-600/80 hover:bg-blue-500 backdrop-blur-sm transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
+                  className="text-sm md:text-base bg-blue-600/80 hover:bg-blue-500 backdrop-blur-xs transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
                 >
                   Download
                 </Button>
@@ -88,14 +88,14 @@ export default function Home() {
                   href="https://ramura.uniproject.jp/license"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm md:text-base bg-indigo-600/80 hover:bg-indigo-500 backdrop-blur-sm transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
+                  className="text-sm md:text-base bg-indigo-600/80 hover:bg-indigo-500 backdrop-blur-xs transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
                 >
                   License
                 </Button>
                 <Button<"Link">
                   href="https://ramura.uniproject.jp/contacts"
                   target="_blank"
-                  className="text-sm md:text-base bg-violet-600/80 hover:bg-violet-500 backdrop-blur-sm transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
+                  className="text-sm md:text-base bg-violet-600/80 hover:bg-violet-500 backdrop-blur-xs transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
                 >
                   Contacts
                 </Button>
@@ -116,7 +116,7 @@ export default function Home() {
         <section className="py-20 bg-black/80">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-5xl font-bold text-white mb-12 font-BIZMincho">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-blue-400">
                 配布動画
               </span>
             </h2>
@@ -141,7 +141,7 @@ export default function Home() {
         <section className="py-20 bg-black/90">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl font-bold text-white mb-8 font-BIZMincho">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
+              <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-blue-400">
                 相互リンク
               </span>
             </h2>

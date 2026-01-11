@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen p-0 m-0 justify-center items-center bg-custom-gradient">
       <section className="relative min-h-screen w-full overflow-hidden px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-blue-900/30 to-black animate-gradient-x" />
+        <div className="absolute inset-0 bg-linear-to-br from-purple-900/30 via-blue-900/30 to-black animate-gradient-x" />
         <div className="relative flex flex-col md:flex-row items-center px-4 md:px-20 h-full max-w-7xl mx-auto h-screen justify-center my-10">
           <div className="flex flex-col space-y-8 z-10 w-full md:w-1/2 text-white">
             <h1 className="text-6xl font-bold text-center md:text-left">Download</h1>
@@ -47,25 +47,25 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-3 md:gap-4 w-full max-w-sm mx-auto md:mx-0">
               <Button<"Link">
                 href="/download/dl-endpoint?file=tandokuon.zip"
-                className="text-sm md:text-base bg-purple-600/80 hover:bg-purple-500 backdrop-blur-sm transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
+                className="text-sm md:text-base bg-purple-600/80 hover:bg-purple-500 backdrop-blur-xs transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
               >
                 単独音
               </Button>
               <Button<"Link">
                 href="/download/dl-endpoint?file=renzokuon.zip"
-                className="text-sm md:text-base bg-blue-600/80 hover:bg-blue-500 backdrop-blur-sm transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
+                className="text-sm md:text-base bg-blue-600/80 hover:bg-blue-500 backdrop-blur-xs transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
               >
                 連続音
               </Button>
               <Button<"Link">
                 href="/download/dl-endpoint?file=tougou.zip"
-                className="text-sm md:text-base bg-indigo-600/80 hover:bg-indigo-500 backdrop-blur-sm transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
+                className="text-sm md:text-base bg-indigo-600/80 hover:bg-indigo-500 backdrop-blur-xs transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
               >
                 統合音源
               </Button>
               <Button<"Link">
                 href="/download/dl-endpoint?file=tokushu.zip"
-                className="text-sm md:text-base bg-violet-600/80 hover:bg-violet-500 backdrop-blur-sm transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
+                className="text-sm md:text-base bg-violet-600/80 hover:bg-violet-500 backdrop-blur-xs transform hover:-translate-y-1 transition-all duration-300 px-3 py-2"
               >
                 特殊音源
               </Button>
