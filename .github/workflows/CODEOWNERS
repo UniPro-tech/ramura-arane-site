@@ -4,4 +4,3 @@ argoCD/ @UniPro-tech/Kubernetes
 .dockerignore @UniPro-tech/Kubernetes
 Docker @UniPro-tech/Kubernetes
 LICENSE @UniPro-tech/BoardMember
-public/ @UniPro-tech/BoardMember
