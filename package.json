@@ -28,6 +28,6 @@
     "postcss": "^8.5.9",
     "tailwindcss": "^4.2.2",
     "ts-prune": "^0.10.3",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.0"
   }
 }
